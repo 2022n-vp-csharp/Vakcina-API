@@ -20,19 +20,15 @@ Nyissa meg az _OltasDTO_ üres osztályt. Ez az osztály fogja reprezentálni az
 
 **3.)** Készítsen hozzá tulajdonságokat, hogy az alábbi JSON objektumnak feleljen meg. Ügyeljen a névre és a hozzá tartozó érték típusára. (2 pont)
 
+```json
 {
-
-&quot;taj\_szam&quot;: 497602313,
-
-&quot;vakcina&quot;: &quot;AstraZeneca&quot;,
-
-&quot;orvos&quot;: &quot;Dr. Bubó Bodó&quot;,
-
-&quot;datum\_utolso&quot;: &quot;2022-03-01T00:00:00&quot;,
-
-&quot;oltas\_szam&quot;: 2
-
+  "taj_szam": 497602313,
+  "vakcina": "AstraZeneca",
+  "orvos": "Dr. Bubó Bodó",
+  "datum_utolso": "2022-03-01T00:00:00",
+  "oltas_szam": 2
 }
+```
 
 **4.)** Készítsen egy beállító konstruktort, ami minden értékét beállítja a paraméterben megadott értékekkel. (1 pont)
 
@@ -59,12 +55,12 @@ Ha az orvos létrehoz egy oltást a kliens oldali front-end rendszeren, akkor a 
 A következő 4 feladatot hajtsa végre a _PostOltas_ és a _PutOltas_ metóduson is.
 
 **10.)** Ellenőrizze, hogy a kapott oltás létezik-e már az adatbázisban. (4 pont)
-  a. Első oltás esetén, ha létezik az adott TAJ szám, akkor adja vissza az alábbi konfliktus hibaüzenetet: _„Ezzel a TAJ számmal már lett rögzítve oltás.&quot;_
-  b. Megerősítő oltás esetén, az ellenkezőjét kell vizsgálni. Konfliktus esetén ezt adja vissza: _„Ezzel a TAJ még nem lett rögzítve oltás.&quot;_
+  a. Első oltás esetén, ha létezik az adott TAJ szám, akkor adja vissza az alábbi konfliktus hibaüzenetet: _"Ezzel a TAJ számmal már lett rögzítve oltás."_
+  b. Megerősítő oltás esetén, az ellenkezőjét kell vizsgálni. Konfliktus esetén ezt adja vissza: _"Ezzel a TAJ még nem lett rögzítve oltás."_
 
 **11.)** Vakcina keresése és mennyiség módosítása. (4 pont)
   a. Keresse ki az oltáshoz tartozó vakcina rekordot az elsődleges kulcsa alapján.
-  b. Ha a vakcina mennyisége 0 vagy kisebb adjon 400 Bad Request hibaüzenetet az alábbi szöveggel: „Elfogyott a választott vakcina.&quot;
+  b. Ha a vakcina mennyisége 0 vagy kisebb adjon 400 Bad Request hibaüzenetet az alábbi szöveggel: "Elfogyott a választott vakcina."
 
 **12.)** Ha van elegendő vakcina, akkor csökkentse a megtalált vakcina mennyiségét eggyel. Az EntityState.Modified parancs frissíti majd az adatbázisban is a rekordot. (2 pont)
 
